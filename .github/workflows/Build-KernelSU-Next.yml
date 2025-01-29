@@ -62,7 +62,7 @@ jobs:
      - name: Enable lxc & docker config
        run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
-        axel https://github.com/jqtmviyu/LXC_KernelSU_Action/raw/refs/heads/main/patches/lxc-docker-config.conf
+        wget https://github.com/jqtmviyu/LXC_KernelSU_Action/raw/refs/heads/main/patches/lxc-docker-config.conf
         cat lxc-docker-config.conf >> android-kernel/arch/arm64/configs/gki_defconfig
         echo "# CONFIG_ANDROID_PARANOID_NETWORK is not set" >> android-kernel/arch/arm64/configs/gki_defconfig
         
